@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f4ee">
+    <title>Casa — Interior Design Studio</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="/" aria-label="Casa home">
+          <span class="brand-mark" aria-hidden="true">c.</span>
+          <span class="brand-name">casa<span class="brand-period">.</span></span>
+        </a>
+
+        <div class="sidebar-copy">
+          <span class="eyebrow">YOUR DESIGN STUDIO</span>
+          <h1>Make room<br>for better living.</h1>
+          <p>A thoughtful home starts with a conversation. Tell us about your space, and we'll make every square foot count.</p>
+        </div>
+
+        <div class="inspiration-card">
+          <div class="inspiration-art" aria-hidden="true">
+            <span class="sun"></span>
+            <span class="art-arch"></span>
+            <span class="art-sofa"></span>
+            <span class="art-plant plant-one"></span>
+            <span class="art-plant plant-two"></span>
+          </div>
+          <span class="eyebrow">THE DESIGN PRINCIPLE</span>
+          <p>Beautiful rooms are made for real life.</p>
+        </div>
+
+        <div class="sidebar-footer">
+          <span class="local-dot"></span>
+          <span>Private, local &amp; yours</span>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">CASA DESIGN ASSISTANT</div>
+            <div class="topbar-subtitle">A home that feels like you.</div>
+          </div>
+          <div class="connection-wrap">
+            <span class="connection-dot" id="connection-dot"></span>
+            <span id="connection-label">Checking Ollama…</span>
+            <span class="model-badge">qwen3:4b</span>
+          </div>
+        </header>
+
+        <section class="chat-panel" aria-label="Interior design chat">
+          <div class="chat-heading">
+            <div class="assistant-avatar" aria-hidden="true">c.</div>
+            <div>
+              <h2>Your interior designer</h2>
+              <p>Practical ideas, made for your home</p>
+            </div>
+            <button class="new-chat-button" id="new-chat" type="button" title="Start a new conversation">
+              <span aria-hidden="true">↻</span> New chat
+            </button>
+          </div>
+
+          <div class="messages" id="messages" aria-live="polite">
+            <div class="welcome-message">
+              <span class="welcome-sparkle" aria-hidden="true">✳</span>
+              <h3>Let's make your home work beautifully.</h3>
+              <p>Share your room sizes and what matters most. I'll help you plan a cohesive home with furniture that fits, useful storage, layered lighting and realistic walkways.</p>
+              <div class="suggestion-label">A good place to start</div>
+              <button class="suggestion-chip" type="button" data-prompt="Help me plan my home. Ask me for the essential details you need, one concise set of questions at a time.">What details should I share?</button>
+            </div>
+          </div>
+
+          <form class="composer" id="chat-form">
+            <label class="visually-hidden" for="message-input">Describe your home or ask a design question</label>
+            <textarea id="message-input" rows="1" maxlength="20000" placeholder="Tell me about your home, room dimensions, or design question…" required></textarea>
+            <div class="composer-bottom">
+              <span class="composer-hint">Exact dimensions help us recommend furniture that really fits.</span>
+              <button class="send-button" type="submit" id="send-button">
+                <span>Send</span><span aria-hidden="true">↑</span>
+              </button>
+            </div>
+          </form>
+          <p class="privacy-note">Runs on your computer with Ollama. Your conversation stays local.</p>
+        </section>
+      </main>
+    </div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
